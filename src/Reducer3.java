@@ -53,7 +53,7 @@ public  class Reducer3 extends Reducer<IntWritable, Text,Text, DoubleWritable>
 					String temp[]=s.split(" ");
 					double d=Double.parseDouble(temp[0]);
 					if(count==0)
-			           context.write(new Text("---Minimum volatility---"),new DoubleWritable(10));
+			           		context.write(new Text("---Minimum volatility---"),new DoubleWritable(10));
 					if(count==size-10)
 						context.write(new Text("---Maximum volatility---"),new DoubleWritable(10));
 					String op[]=temp[1].split("\\.");
