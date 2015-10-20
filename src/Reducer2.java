@@ -23,7 +23,6 @@ public  class Reducer2 extends Reducer<Text, DoubleWritable, Text, DoubleWritabl
 			String s="";
 			int N=0;
 			double totalDob=0;
-					
 			ArrayList<Double> al=new ArrayList<Double>();
 			for(DoubleWritable d:values)
 			{
@@ -44,7 +43,6 @@ public  class Reducer2 extends Reducer<Text, DoubleWritable, Text, DoubleWritabl
 						
 				totalDob=(double)totalDob/(N-1);
 				double volatility=Math.sqrt(totalDob);
-			
 				if(volatility!=0)
 					context.write(key,new DoubleWritable(volatility));
 			}
